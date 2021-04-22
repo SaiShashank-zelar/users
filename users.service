@@ -1,0 +1,12 @@
+[Unit]
+Description=users
+
+[Service]
+User=todoshop
+Environment=ZIPKIN_URL=172.31.26.67
+Environment=DB_HOST=172.31.27.128
+ExecStart=/bin/java -jar /home/todoshop/users/users.jar
+SyslogIdentifier=users
+
+[Install]
+WantedBy=multi-user.target
