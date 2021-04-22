@@ -1,0 +1,31 @@
+# Users:
+
+### To install maven 
+
+    #apt update
+    
+    #apt install maven -y
+
+### To create a user:-
+
+    #useradd -m -s /bin/bash todoapp
+    
+    #su - todoapp
+    
+### To clone git repository in the todoapp and run the maven project:-
+
+    #git clone https://github.com/zelar-soft-todoapp/users.git
+    
+    #mvn package
+    
+    #mv target/users-api-0.0.1.jar users.jar
+    
+### To create a service file:-
+
+    #mv users.service /etc/systemd/system/users.service
+    
+    #systemctl daemon-reload
+
+    #systemctl start users
+ 
+    #systemctl restart users
