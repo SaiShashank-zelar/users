@@ -2,6 +2,9 @@ pipeline {
   agent {
     label 'todoapp'
   }
+   tools {
+          maven 'mvn-3.8.1'
+    }
   stages {
     stage('Download Dependencies') {
       steps {
