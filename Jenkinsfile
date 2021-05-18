@@ -1,4 +1,4 @@
-@Library('Todoapp') _
+
 pipeline {
   agent {
     label 'todoapp'
