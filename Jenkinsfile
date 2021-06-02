@@ -2,5 +2,5 @@
 
 Todoapp (
    COMPONENT : 'users',
-   NEXUS_IP  : '172.31.64.24'
+   NEXUS_IP  : '172.31.5.12'
 )
