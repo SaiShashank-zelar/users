@@ -4,7 +4,9 @@ RUN         useradd -ms /bin/bash todoapp
 WORKDIR     /home/todoapp/users
 COPY        / .
 RUN         mvn package
-COPY        /target/users-api-0.0.1.jar /home/todoapp/users/users.jar
+WORKDIR     /home/todoapp/users/target
+COPY        users-api-0.0.1.jar /home/todoapp/users/users.jar
+WORKDIR     /home/todoapp/users
 COPY        users.service /etc/systemd/system/users.service
 CMD         ["java", "-jar", "users.jar"]
 
