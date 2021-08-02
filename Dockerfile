@@ -1,6 +1,6 @@
 FROM        openjdk:8-jdk-alpine
 ARG         MAVEN_VERSION=3.8.1
-RUN         useradd todoapp
+RUN         useradd -m -s /bin/bash todoapp
 USER        todoapp
 WORKDIR     /home/todoapp/users
 COPY        / .
