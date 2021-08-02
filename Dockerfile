@@ -3,7 +3,7 @@ RUN         useradd todoapp
 USER        todoapp
 WORKDIR     /home/todoapp/users
 COPY        / .
-RUN         mvn -e package
+RUN         mvn -X package
 
 FROM        openjdk:8-jre-slim
 COPY        --from=BUILD /home/todoapp/users/target/users-api-0.0.1.jar users.jar
