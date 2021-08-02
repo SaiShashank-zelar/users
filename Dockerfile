@@ -1,4 +1,4 @@
-FROM        openjdk:8-jdk-alpine
+FROM        maven:3.8.1-jdk-8-slim
 RUN         ln -sf /bin/bash /bin/sh
 RUN         useradd -ms /bin/bash todoapp
 WORKDIR     /home/todoapp/users
