@@ -1,9 +1,9 @@
-FROM        maven:3.3-jdk-8-onbuild  as BUILD
+FROM        maven:3.8.1-openjdk-8 as BUILD
 RUN         useradd todoapp
 USER        todoapp
 WORKDIR     /home/todoapp/users
 COPY        / .
-RUN         mvn clean package
+RUN         mvn package
 
 FROM        openjdk:8-jre-slim
 COPY        --from=BUILD /home/todoapp/users/target/users-api-0.0.1.jar users.jar
