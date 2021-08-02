@@ -5,7 +5,7 @@ WORKDIR     /home/todoapp/users
 COPY        / .
 RUN         mvn clean package
 RUN         dir
-ADD         home/todoapp/users/target/* home/todoapp/users/users.jar
+COPY        home/todoapp/users/target/* home/todoapp/users/users.jar
 COPY        users.service /etc/systemd/system/users.service
 CMD         ["java", "-jar", "users.jar"]
 
