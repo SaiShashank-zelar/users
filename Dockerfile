@@ -1,4 +1,5 @@
 FROM        openjdk:8-jdk-alpine
+RUN         ln -sf /bin/bash /bin/sh
 RUN         useradd -ms /bin/bash todoapp
 WORKDIR     /home/todoapp/users
 COPY        / .
