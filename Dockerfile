@@ -1,4 +1,4 @@
-FROM        maven:3.3-openjdk-8 as BUILD
+FROM        maven:3.3-jdk-8-onbuild  as BUILD
 RUN         useradd todoapp
 USER        todoapp
 WORKDIR     /home/todoapp/users
