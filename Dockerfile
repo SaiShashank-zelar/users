@@ -3,7 +3,7 @@ RUN         ln -sf /bin/bash /bin/sh
 RUN         useradd -ms /bin/bash todoapp
 WORKDIR     /home/todoapp/users
 COPY        / .
-RUN         mvn package
+RUN         mvn clean package
 WORKDIR     /home/todoapp/users/target
 COPY        users-api-0.0.1.jar /home/todoapp/users/users.jar
 WORKDIR     /home/todoapp/users
