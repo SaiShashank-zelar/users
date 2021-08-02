@@ -1,6 +1,5 @@
 FROM        openjdk:8-jdk-alpine
-RUN         useradd todoapp
-USER        todoapp
+RUN         useradd -ms /bin/bash todoapp
 WORKDIR     /home/todoapp/users
 COPY        / .
 RUN         mvn package
