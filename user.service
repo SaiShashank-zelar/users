@@ -1,0 +1,8 @@
+[Unit]
+Description=users
+
+[Service]
+ExecStart=/bin/java -jar /home/todoapp/users/target/users.jar
+SyslogIdentifier=users
+[Install]
+WantedBy=multi-user.target
