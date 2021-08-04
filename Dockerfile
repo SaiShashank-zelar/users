@@ -4,7 +4,7 @@ RUN         useradd -ms /bin/bash todoapp
 WORKDIR     /home/todoapp/users
 COPY        . /home/todoapp/users
 RUN         mvn clean package
-COPY        target/users-api-0.0.1.jar /home/todoapp/users/users.jar
+COPY        /home/todoapp/users/target/users-api-0.0.1.jar /home/todoapp/users/users.jar
 COPY        users.service /etc/systemd/system/users.service
 RUN         ls
 
