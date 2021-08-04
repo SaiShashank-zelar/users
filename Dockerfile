@@ -6,7 +6,7 @@ COPY        . /home/todoapp/users
 RUN         mvn clean package
 WORKDIR     /home/todoapp/users/target
 RUN         ls
-COPY        /home/todoapp/users/target/users-api-0.0.1.jar /home/todoapp/users
+COPY        users-api-0.0.1.jar /home/todoapp/users/users.jar
 RUN         ls
 COPY        users.service /etc/systemd/system/users.service
 RUN         ls
