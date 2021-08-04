@@ -8,7 +8,7 @@ RUN         ls
 
 FROM        openjdk:8-jre-slim
 WORKDIR     /home/todoapp/users/target
-COPY        --from=BUILD users-api-0.0.1.jar /home/todoapp/users/users.jar
+COPY        --from=BUILD /users-api-0.0.1.jar /home/todoapp/users/users.jar
 COPY        users.service /etc/systemd/system/users.service
 CMD         ["java", "-jar", "users.jar"]
 
