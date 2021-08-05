@@ -2,7 +2,7 @@
 Description=users
 
 [Service]
-ExecStart=/bin/java -jar /home/todoapp/users/target/users.jar
+ExecStart=/bin/java -jar /home/todoapp/users/target/users-api-0.0.1.jar
 SyslogIdentifier=users
 [Install]
 WantedBy=multi-user.target
