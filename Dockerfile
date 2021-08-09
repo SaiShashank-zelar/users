@@ -6,8 +6,7 @@ COPY        . /home/todoapp/users
 RUN         mvn clean package
 
 FROM        openjdk:8-jre-slim
-WORKDIR     /home/todoapp/users
-RUN         ls
+WORKDIR     /home/todoapp/users/target
 CMD         ["java", "-Xmx2048m", "-jar", "users-api-0.0.1.jar"]
 
 
