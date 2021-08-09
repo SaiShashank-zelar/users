@@ -4,6 +4,7 @@ RUN         useradd -ms /bin/bash todoapp
 WORKDIR     /home/todoapp/users
 COPY        . /home/todoapp/users
 RUN         mvn clean package
+RUN         ls
 
 FROM        openjdk:8-jre-slim
 WORKDIR     /home/todoapp/users/target
