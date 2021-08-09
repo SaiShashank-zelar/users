@@ -7,7 +7,6 @@ RUN         mvn clean package
 
 FROM        openjdk:8-jre-slim
 COPY        --from=BUILD /home/todoapp/users/target/users-api-0.0.1.jar users.jar
-RUN         ls
 CMD         ["java", "-Xmx2048m", "-jar", "users.jar"]
 
 
