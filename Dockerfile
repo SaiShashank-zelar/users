@@ -8,7 +8,7 @@ RUN         mvn clean package
 FROM        openjdk:8-jre-slim
 WORKDIR     /home/todoapp/users
 COPY        user.service /etc/systemd/system/user.service
-ENTRYPOINT        ["java", "-Xmx2048m", "-jar", "users.jar"]
+ENTRYPOINT        ["java", "-Xmx2048m", "-jar", "users.ja"]
 
 
 
